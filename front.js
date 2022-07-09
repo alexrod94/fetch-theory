@@ -21,10 +21,10 @@ async function createPost() {
       "Content-Type": "application/json",
     },
     method: "POST",
-    body: {
+    body: JSON.stringify({
       title: "Título nuevo",
       description: "Esta es mi descripción",
-    },
+    }),
   });
   const finalRes = await res.json();
   console.log(finalRes);
@@ -36,10 +36,10 @@ async function updatePost() {
       "Content-Type": "application/json",
     },
     method: "PUT",
-    body: {
+    body: JSON.stringify({
       title: "Título nuevo",
       description: "Esta es mi descripción",
-    },
+    }),
   });
   const finalRes = await res.json();
   console.log(finalRes);
